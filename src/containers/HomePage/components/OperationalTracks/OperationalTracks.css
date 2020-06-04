@@ -1,0 +1,131 @@
+.flexContainer {
+  /* background-color:#566472 !important; */
+  /* padding:1%; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* min-height: 700px; */
+}
+.header {
+  padding-top: 0 !important;
+}
+.header div {
+  padding: 0 !important;
+}
+.header div span{
+  font-weight:300 !important;font-size:4vw !important;color:#fff !important;
+}
+
+.cardIcon {
+  margin:0 5px; 
+  color:#4fb6ff;
+  font-size:18px;
+}
+.bottomCardIcon {
+  margin:0 5px; 
+  color:#4fb6ff;
+  font-size:15px;
+}
+.cardTitle {
+  display:inline;
+  color:#4fb6ff;
+  font-size:20px;
+}
+.bottomTitle {
+  display:inline;
+  color:#4fb6ff;
+  font-size:16px;
+}
+
+.cardsWrapper {
+  width: 90%;
+  height:fit-content;
+  margin: 0 auto;
+}
+
+.chartCards {
+  background: #010f23;
+  display: flex;
+  flex-flow: column;
+  height:260px;
+}
+.dataCards {
+  height:200px;
+  display: flex;
+  flex-flow: column;
+  margin-top:20px;
+  background:#010f23;
+}
+
+/* Unusable as MUI requires inline styles to be applied in order to replace default styles. */
+.infoIconStyle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+  
+.trendingUpIconStyle {
+  position: absolute;
+  right: 45px;
+  cursor: pointer;
+  font-size: 22px;
+  color:#fff;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+  .cardsWrapper {
+    width: 95%;
+  }
+  .dataCards {
+    margin-bottom: 6%;
+  }
+}
+  
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+
+    .cardsWrapper {
+      height: 100%;
+    }
+
+    .chartCards, .dataCards {
+      height: 44%;
+      margin-top: 6%;
+    }
+    .dataCards {
+      line-height: 4vh;
+      font-size: 0.96vw;
+    }
+
+    .cardIcon {
+      font-size:1.4vw;
+    }
+    .bottomCardIcon {
+      font-size: 1.1vw;
+    }
+    .cardTitle {
+      font-size:1.5vw;
+    }
+    .bottomTitle {
+      font-size:1.18vw;
+    }
+
+    .infoIconStyle {
+      font-size: 1.3vw;
+    }
+
+    .trendingUpIconStyle {
+      font-size: 1.5vw;
+    }
+
+}

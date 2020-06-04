@@ -1,0 +1,16 @@
+.vendorLogo {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 1.42857143;
+    margin-left: 2px;
+    /* padding: 2px 0; */
+}
+
+@media only screen and (min-width: 768px) {
+    .vendorLogo {
+        width: 1.8vw;
+        height:1.8vw;
+    }
+}

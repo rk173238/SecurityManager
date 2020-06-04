@@ -1,0 +1,96 @@
+.cardFullDetails {
+  margin:1%;
+  width:98%;
+  text-align: center;
+  background-color: #415161 !important;
+}
+
+.flexContainer {
+  background-color:transparent !important;
+  padding:0%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* min-height: 700px; */
+  height: 100%;
+  position:relative;
+}
+
+.subCard {
+  margin:1%;
+  width:48%;
+  text-align: center;
+  background-color: #415161 !important;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.useCaseCard {
+  margin:1%;
+  width:48%;
+  text-align: center;
+  background-color: #415161 !important;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.subHeader {
+  padding-top: 0 !important;
+  margin-top: -25px;
+}
+.subHeader div {
+  padding: 0 !important;
+}
+.subHeader div span { 
+  font-weight:300 !important;font-size:3vw !important;color:#fff !important;
+}
+
+.useCaseHeader {
+  padding-top: 0 !important;
+  margin-top: 25px;
+}
+.useCaseHeader div {
+  padding: 0 !important;
+}
+.useCaseHeader div span {
+  font-weight:300 !important;font-size:3vw !important;color:#fff !important;
+}
+
+.cardHolder {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.headTab div div {
+  font-size: 2.2vw;
+  font-weight: 400;
+  margin: 2.5%;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .subCard{
+      width: 17.681%;
+      margin: 1.16%;
+    }
+    .useCaseHeader div span{
+      font-weight:300 !important;font-size:1vw !important;
+    }
+    .useCaseCard{
+      width: 23%;
+      margin: 1.16%;
+    }
+    .subHeader div span{
+      font-weight:300 !important;font-size:1vw !important;
+    }
+    .headTab div div{
+      font-size: 1.5vw;
+      font-weight: 400;
+    }
+
+}

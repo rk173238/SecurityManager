@@ -1,0 +1,80 @@
+.loginCard{
+  /*Changes the height & width of the login card*/
+  width:98%;
+  text-align: center;
+  /*The below bgcolor property changes the bgcolor of login card*/
+  background-color: #012e547d !important;
+  display: block;
+  margin: 0 auto;
+  margin-top: 6%;
+  z-index: 10;
+  position: relative;
+}
+.loginBtn button{
+  border-radius: 5px !important;
+  /*This changes the bgcolor of login button*/
+  background-color: rgb(18, 159, 183) !important;
+  font-size: 24px !important;
+  color:#fff !important;
+}
+.loginBtn{
+  border-radius: 5px !important;
+  margin: 40px;
+  background-color: #7395AE !important;
+  width:30% !important;
+  font-style: Arial;
+  font-size: 16px !important;
+  color:#fff !important;
+}
+.loginBtn button span{
+/*changes the font color of login button caption*/
+  color:#fff !important;
+
+}
+.userLoginImage{
+  margin:1%;
+  width: 60%;
+}
+.forgotPassword{
+  text-decoration: none;
+  color:white;
+  font-size: 11px;
+  width: 80%;
+  display: block;
+  text-align: right;
+  margin: auto;
+}
+.dateBanner{
+  width: 42%;
+  display: inline-block;
+  position: relative;
+}
+.dateBanner div:first-child{
+  width: 100% !important;
+}
+.dateBanner button{
+  margin: 2px -18px 0 0 !important;
+}
+.dateSection{
+  width:100%;
+  text-align: center;
+  margin: -18% auto -2% auto;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .loginCard{
+      /*Changes the height & width of the login card*/
+      width:40%;
+    }
+    .forgotPassword{
+      width: 60%;
+    }
+    .subHeader div span{
+      font-weight:300 !important;font-size:4vw !important;
+    }
+    .helpBlock{
+      color: rgb(255, 0, 0) !important;
+      font-size: 1rem !important;
+    }
+
+}

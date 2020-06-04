@@ -1,0 +1,36 @@
+.box {
+padding:10px;
+width:48%;
+float:left;
+height:100px;
+margin-right:2%;
+position:relative;
+text-shadow:1px 1px 3px black;
+}
+
+.techName {
+font-size: inherit;
+color: white;
+text-align: right;
+}
+
+.crossTickIcon {
+top:50%;
+position:absolute;
+transform:translateY(-40%);
+}
+
+.score {
+font-size:30px;
+color:white;
+text-align:right;
+}
+
+@media only screen and (min-width: 768px) {
+    .score {
+        font-size: 2vw;
+    }
+    .techName {
+        font-size: 1.2vw;
+    }
+}

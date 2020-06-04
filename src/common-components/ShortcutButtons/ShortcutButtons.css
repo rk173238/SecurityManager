@@ -1,0 +1,25 @@
+.configButtons{
+    margin: 3% 2% 1% 2%;
+    align-items: flex-end;
+    width:100%;
+    text-align: center;
+    display:inline-block;
+}
+.btn{
+  margin: 1% !important;
+  border-radius: 6%;
+  height: auto !important;
+  padding: 2% !important;
+}
+.btn span{
+  letter-spacing: 1px !important;
+  font-size: 1.5vw !important;
+  padding: 1%;
+  color:rgb(0, 188, 212);
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .configButtons{
+        display:none;
+    }
+}

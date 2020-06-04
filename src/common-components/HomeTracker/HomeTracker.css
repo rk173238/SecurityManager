@@ -1,0 +1,93 @@
+.homeTracker {
+color: #fff;
+position:relative;
+height:100%;
+font-family: Ubuntu Mono, monospace;
+}
+
+.box {
+    background:#010f23;
+    color:#fff;
+    height:12.5%;
+    width: 80%;
+    padding: 10px 20px;
+    display:grid;
+    /* align-items:center;
+    align-content:center; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+.iconStyle {
+    margin-top:10px;
+    font-size:30px;
+    flex:2;
+    color:rgb(126, 216, 243);
+}
+.scoreNum {
+    font-size:35px;
+    color:#0095ff;
+    flex:3;
+    text-align: center;
+}
+.scoreName {
+    color:#7ed8f3;
+    font-size:12px;
+    text-align:center;
+    white-space: nowrap;
+}
+
+.redShadow {
+transition: all 0.5s;
+}
+.redShadow:hover {
+box-shadow: 0 0 20px #FF0000;
+transition: all 0.5s;
+}
+
+.greenShadow {
+transition: all 0.5s;
+}
+.greenShadow:hover {
+box-shadow: 0 0 20px #5da904;
+transition: all 0.5s;
+}
+
+.toolTip {
+max-width: 250px;
+display: block;
+word-break: normal;
+overflow-wrap: break-word;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+    .homeTracker {
+        margin-bottom: 70px;
+    }
+    .iconStyle {
+        margin-top: 2px;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+
+    .box {
+        display: grid;
+        font-size: 3vw;
+        align-content: space-around;
+    }
+    .iconStyle {
+        margin-top: 0;
+        font-size: 0.8em;
+    }
+    .scoreNum {
+        font-size: 1em;
+        line-height: 0.7;
+    }
+    .scoreName {
+        font-size: 0.3em;
+    }
+
+}

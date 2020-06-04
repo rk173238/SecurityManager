@@ -1,0 +1,93 @@
+    
+    
+.mainWrapper {
+width:100%;
+height: 15%;
+margin: 0 auto;
+}
+
+.homePageScores {
+color:#fff;
+width:97%;
+height:100%;
+background:#010f23;
+margin:0 auto;
+display: flex;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 2px 2px 2px #0615ab, 
+            -2px -2px 2px #0615ab, 
+            0 0 20px #0615ab;
+}
+
+.scoreWrapper {
+width: fit-content;
+margin:0 auto;
+transition: all 0.5s;
+}
+
+.scoreBox {
+width:20%;
+display: grid;
+align-content: center;
+border-right: 1px dotted #fff;
+}
+.scoreBox:last-child {
+border-right: none;
+}
+
+.arrowUp, .arrowDown {
+font-size: 32px;
+margin-right: 10px;
+display: inline;
+}  
+.arrowUp {
+color: #32f732;
+text-shadow: 0px -1px 8px #32f732;
+}
+.arrowDown {
+color: #ef0808;
+text-shadow: 0px -1px 8px #ef0808;
+}  
+
+.techName {
+font-size:16px;
+text-align:center;
+color:#4fb6ff;
+white-space: nowrap;
+}
+
+.scorePercent {
+font-size:26px;
+display:inline;
+}
+
+@media only screen and (max-width: 768px) {
+    .mainWrapper {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .homePageScores {
+        overflow-x: auto;
+    }
+    
+    .scoreBox {
+        padding: 0 10px 0 10px;
+        width: fit-content;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .arrowUp, .arrowDown {
+        font-size: 2.5vw;
+    }
+
+    .scorePercent {
+        font-size:2vw;
+    }
+
+    .techName {
+        font-size: 1.18vw;
+    }
+}

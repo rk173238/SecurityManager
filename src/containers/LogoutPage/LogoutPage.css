@@ -1,0 +1,8 @@
+.flexContainer{
+  background-color:#566472 !important;
+  padding:1%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  min-height: 700px;
+}

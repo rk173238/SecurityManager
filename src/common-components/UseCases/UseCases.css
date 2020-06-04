@@ -1,0 +1,34 @@
+.usecasesWrapper {
+width:80%;
+display:flex;
+overflow-y:hidden;
+overflow-x:hidden;
+}
+
+
+.navLeft{
+color: rgba(58, 77, 187,1);;
+font-size: 40px;
+cursor: pointer;
+position: absolute;
+top: 35%;
+z-index: 1; 
+}
+.navRight{
+color: rgba(58, 77, 187,1);;
+font-size: 40px;
+cursor: pointer;
+position: absolute;
+top: 35%;
+z-index: 1;
+right: 2%;
+} 
+
+/* MOBILE */  
+@media only screen and (max-width: 768px) {
+    .usecasesWrapper {
+      overflow-x: scroll;
+    }
+
+}
+  

@@ -1,0 +1,21 @@
+.root{
+    text-align: right;
+    cursor: pointer;
+    color: white;
+    opacity: 0.6;
+}
+.root:hover {
+    opacity: 1;
+}
+/* .btn{
+    border: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0px;
+    outline: none;
+    font-size: 0px;
+    position: relative;
+    overflow: visible;
+    background: none;
+} */

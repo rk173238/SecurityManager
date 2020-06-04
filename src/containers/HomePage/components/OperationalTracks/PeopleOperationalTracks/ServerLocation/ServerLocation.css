@@ -1,0 +1,28 @@
+.serverList {
+display:flex;
+padding:0 5px;
+color:#ffffffa6;
+font-size: 1em;
+}
+
+.serverFlag {
+width:24px;
+height: 18px;
+flex:1;
+}
+
+.serverName {
+flex:6
+}
+
+.serverCount {
+flex:1;
+text-align:right;
+}
+
+@media only screen and (min-width: 768px) {
+    .serverFlag {
+        width: 1.8vw;
+        height: 1.3vw;
+    }
+}

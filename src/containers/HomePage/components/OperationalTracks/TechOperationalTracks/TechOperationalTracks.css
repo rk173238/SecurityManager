@@ -1,0 +1,30 @@
+.card{
+  margin:1%;
+  width:100%;
+  height: auto;
+  text-align: center;
+  /* background-color: #415161 !important; */;
+  background-color: rgba(11, 18, 26, 0.8) !important;
+  cursor: pointer;
+}
+.header{
+  padding-top: 0 !important;
+}
+.header div{
+  padding: 0 !important;
+}
+.header div span{
+  font-weight:300 !important;font-size:4vw !important;color:#fff !important;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .card{
+      width:31%;
+      margin:1%;
+    }
+    .header div span{
+      font-weight:300 !important;font-size:120% !important;
+    }
+
+}

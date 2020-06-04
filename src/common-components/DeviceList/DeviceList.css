@@ -1,0 +1,81 @@
+.arrowUp, .arrowDown {
+font-size: 32px;    
+bottom: 2px;
+position: relative;
+}
+
+.arrowUp {
+color: #32f732;
+text-shadow: 0px -1px 8px #1ab124;
+bottom: 2px;
+padding: 0 15px;
+}
+.arrowDown {
+color: #f73832;
+text-shadow: 0px -1px 8px #f73832;
+top: 2px;
+padding: 0 15px;
+}
+
+.usecaseScore {
+font-size: 28px;
+margin-bottom: 0;
+}
+
+.usecaseName {
+font-size: 18px;
+margin:0 40px;
+color: #00b8ff;
+margin-bottom: 0;
+}
+
+.deviceDetails {
+width: 100%;
+direction:ltr;
+color: white;
+height:100%;
+overflow-y:auto;
+}
+
+.trendIcon{
+    font-size: 40px;
+}
+
+/* width */
+.deviceDetails::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+.deviceDetails::-webkit-scrollbar-track {
+background: #ffffff30;
+border-radius: 20px;
+}
+
+/* Handle */
+.deviceDetails::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 20px;
+}
+
+/* Handle on hover */
+.deviceDetails::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .arrowUp, .arrowDown {
+        font-size: 2.3vw;
+    }
+        
+    .usecaseScore {
+        font-size: 2.1vw;
+    }
+
+    .usecaseName {
+        font-size: 1.3vw;
+    }
+
+
+}

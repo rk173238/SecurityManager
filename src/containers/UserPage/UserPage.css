@@ -1,0 +1,86 @@
+.fieldGroup {
+list-style-type: none;
+padding: 0; 
+margin: 0;
+}
+
+.formField {
+display: flex;
+justify-content: space-between;
+margin: 0 0 10px 0;
+padding: 5px 0;
+}
+
+.formLabel {
+flex:2; 
+cursor: pointer;
+color: rgba(255,255,255,0.8);
+}
+
+.formInput {
+background: transparent;
+border: 0;
+font: inherit;
+color: white;
+border-bottom: 1px solid rgba(255,255,255,0.6);
+padding: 0px 2px;
+flex: 8;
+}
+
+.formInput:focus {
+outline:none;
+border-bottom:2px solid #143f82;
+margin-bottom: -1px;
+}
+
+/* Usecase and Subcategory Weightage */
+.accordionToggle {
+font-weight:bold;
+cursor:pointer;
+color:rgb(0, 128, 222);
+font-size:20px;
+margin-bottom:0;
+}
+
+.submitButton {
+color: white;
+float: right;
+border: 1px solid #000000;
+background: transparent;
+padding: 10px 50px;
+cursor: pointer;
+font: inherit;
+border-radius: 5px;
+background-image: linear-gradient(to bottom, #005794, #000000bf);
+}
+
+.responsiveFont {
+    font-size: 20px;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+    .responsiveFont {
+        font-size: 1.1vw;
+    }
+    
+    .accordionToggle {
+        font-size: 1.45vw;
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+    .formField {
+        display: block;
+    }
+    .formLabel, 
+    .formInput {
+        width: 100%;
+        display: block;
+    }
+    .submitButton {
+        float: left;
+    }
+
+}

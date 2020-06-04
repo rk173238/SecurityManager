@@ -1,0 +1,13 @@
+
+.loginBtn{
+    color: #fff !important;
+    margin: 7px 0px !important;
+}
+.loginBtn div span{
+  font-size: 14px !important;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+}

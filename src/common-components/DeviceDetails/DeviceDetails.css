@@ -1,0 +1,45 @@
+.cardHolder{
+  box-sizing: border-box;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+  width:100%;
+}
+.navLeft{
+  display: none;
+  color: white;
+  font-size: 40px;
+  z-index: 1;
+  cursor: pointer;
+  bottom: 35%;
+  left: 1.5%;
+  position: absolute;
+}
+.navRight{
+  display: none;
+  color: white;
+  z-index: 1;
+  font-size: 40px;
+  bottom: 35%;
+  right: 1.5%;
+  position: absolute;
+  cursor: pointer;
+}
+.wrapper{
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .navLeft{
+      display: none;
+    }
+    .navRight{
+      display: inline-block;
+    }
+    .cardHolder{
+    	overflow-x: hidden;
+    }
+
+}

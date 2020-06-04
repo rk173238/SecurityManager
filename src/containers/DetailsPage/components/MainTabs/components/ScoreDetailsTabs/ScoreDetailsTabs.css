@@ -1,0 +1,21 @@
+.tabDiv{
+    display: flex;
+}
+
+.donutDiv{
+    width: 20%;
+}
+.overallScore{
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+    .divideRows {
+        height:33%;
+    }
+}
+
+/* height:'190px',width:'20%',textAlign:'center',backgroundColor:'transparent' */
+/* height:'190px',width:'80%',textAlign:'center',backgroundColor:'transparent',position:'relative' */

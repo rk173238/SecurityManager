@@ -1,0 +1,23 @@
+.fadeInAnimation {
+animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slideDownAnimation {
+    animation: slideInDown 1s;
+}
+@keyframes slideInDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}

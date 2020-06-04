@@ -1,0 +1,130 @@
+.header {
+height: 7.5vh;
+margin-top: -7.5vh;
+width: 100%;
+background-image: linear-gradient(to right,#f6f9fc,#5b8fa3,#041933,#010117,#010117,#010117, #090223,#090223);
+color:#fff;
+}
+
+/* .logoGroup, .menuGroup {
+width:100%;
+} */
+
+.logoGroup {
+float: left;
+}
+.menuGroup {
+float: right;
+padding-right: 1%;
+}
+
+.headerMenu {
+float:right;
+width:100%;
+margin-right: 1%;
+}
+
+.logoLink {
+font-weight:normal;
+display: inline;
+margin:0 35px;
+line-height: 7.5vh;
+text-shadow: 3px 3px 3px black;
+font-size: 1.5rem;
+}
+
+.logoLink span.mobileName {
+display:none;
+}
+
+.headerLink {
+color: white;
+font-size:18px;
+text-decoration: none;
+float:left;
+margin:0 20px;
+line-height: 7.5vh;
+margin-top:-3px;
+}
+.headerLink a {
+color: white;
+}
+.headerLink a:hover {
+text-decoration: none;
+color:yellow;
+}
+.headerLink:last-child {
+margin-right: 0;
+margin-left: 0;
+}
+.linkActive {
+border-bottom: 2px solid yellow;
+color:yellow;
+}
+.dropdownWrapper {
+position:absolute;
+right:0;
+text-align:right;
+color:#fff;
+background:#052758;
+width: 400%;
+z-index:10;
+display:none;
+}
+.dropDownItem {
+line-height: 1;
+cursor: pointer;
+padding: 7px;
+}
+.dropDownItem:hover {
+background: #031b3e;
+}
+
+.userName {
+padding:0 10px;
+}
+
+.classifyMenu {
+padding: 5px;
+line-height: 1;
+font-size: 14px;
+padding-bottom: 5px;
+color: rgba(255, 255, 255, 0.8);
+border-top: 1px solid rgba(255, 255, 255, 0.25);
+border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .header {
+        height: 7.5vh;
+        margin-top:-50px;
+    }
+
+    .headerLink, .logoLink {
+        line-height: 7.5vh;
+    }
+    
+    .logoLink span.desktopName {
+        display:none;
+    }
+    .logoLink span.mobileName {
+        display: inline;
+    }
+    .menuGroup {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    
+    .headerLink {
+        font-size: 1.3vw;
+    }
+
+    .logoLink { 
+        font-size: 2vw;
+    }
+}

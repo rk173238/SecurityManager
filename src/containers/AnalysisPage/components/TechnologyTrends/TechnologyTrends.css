@@ -1,0 +1,54 @@
+
+.deviceNumber {
+    float:right;
+    line-height:1; 
+    font-size:35px;
+    cursor:pointer;
+    position:relative;
+    border-bottom:1px dotted #76a6ee;
+}
+.inputWrapper {
+    z-index:2;
+    width:100%;
+    color:#fff;
+    padding:5px;
+    font-size:22px;
+    position:relative;
+    border:1px solid #76a6ee;
+    background:rgb(5, 39, 88);
+}
+.searchInput {
+    border: 0;
+    background:transparent;
+    width:80%;
+    color:#fff;
+}
+.searchInput:focus {
+    outline: 0;
+}
+.radarChart {
+    height: 100%;
+    margin-top:15px;
+    border-style:solid;
+    border-width:1;
+    border-color:#007acc;
+    box-shadow:8px 2px 15px;
+}
+.technologyTrendsData {
+padding: 40px 40px 0 40px;
+}
+
+.searchResults {
+background: #052758;
+z-index: 2;
+position: absolute;
+width: 100%;
+padding: 0 10px;
+}
+.searchResults div {
+    padding:5px;
+}
+.searchResults div > p {
+    display: inline;
+    font-size: 1.3em;
+}

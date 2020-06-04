@@ -1,0 +1,46 @@
+.arrowbutton{
+display: none;
+z-index: 1;
+position: absolute;
+cursor: pointer;
+color:rgba(58, 77, 187,1); 
+}
+
+.overallScoresContainer {
+width:100%;
+height: 100%;
+background-color:transparent;
+display:flex;
+/* padding-top:20px; */
+border-bottom:1px dotted #022d6f;
+overflow-y:hidden;
+overflow-x:hidden;
+}
+
+.navLeft, .navRight {
+font-size: 40px;
+cursor: pointer;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 35px;
+height: 35px;
+z-index: 1; 
+background: #062e69;
+opacity: 0.8;
+text-align:center;
+color: #dcdcdc;
+line-height: 0.9em;
+border-radius: 50%;
+font-size: 35px;
+text-shadow: 1px 1px 1px #000;
+}
+.navLeft:hover, .navRight:hover {
+    opacity: 1;
+}
+.navLeft{
+left:10px;
+}
+.navRight{
+right: 10px;
+}

@@ -1,0 +1,12 @@
+.usecaseName {
+margin:0;
+text-align:center;
+width:100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .usecaseName {
+        font-size: 1.2vw;
+        position: absolute;
+    }
+}

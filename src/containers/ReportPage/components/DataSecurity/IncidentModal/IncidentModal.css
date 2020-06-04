@@ -1,0 +1,51 @@
+.modalOverlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1100;
+    opacity: 1;
+    animation: show .5s ease;
+}
+.dialog{
+    text-align: center;
+}
+.dialog div{
+    max-width: 100%;
+}
+/* .btn{
+
+}
+.btn svg{
+  color:#fff !important;
+} */
+
+
+.modal {
+  border-radius: 2%;
+  background-color: #fff;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+  width: 80% !important;
+}
+.closeButton {
+  float: right;
+  background: #000;
+  width: 1.5rem;
+  height: 1rem;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 576px) {
+  .modal {
+    width: 32rem;
+  }
+}

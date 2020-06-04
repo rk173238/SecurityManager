@@ -1,0 +1,10 @@
+.techRow {
+    display: inline-grid;
+    margin: 0 35px;
+}
+
+.techName {
+    text-align: center;
+    margin: 0;
+    margin-top: -15px;
+}

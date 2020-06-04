@@ -1,0 +1,17 @@
+.formHeader {
+text-align:center;
+}
+
+.tab {
+padding:10px;
+cursor: pointer;
+margin: 1px;
+}
+
+.tabpanel {
+padding:10px;
+position: absolute;
+width: 100%;
+box-sizing: border-box;
+box-shadow: 0 0 10px #000;
+}
