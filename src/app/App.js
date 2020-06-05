@@ -12,6 +12,7 @@ class App extends Component {
         <MuiThemeProvider>
           <MainContent className={classes.content}/>
         </MuiThemeProvider>
+        {console.log('admin','securityManager.123')}
       </Router>
     );
   }

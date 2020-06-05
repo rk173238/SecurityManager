@@ -20,7 +20,7 @@ function login(username, password) {
     // let base64data = buff.toString('base64');
     // console.log(base64data);
     var user={user:'',token:'',admin:false}
-    if(username==='admin'&&password==='SMC@crs.123'){
+    if(username==='admin'&&password==='securityManager.123'){
       user={user:'admin',token:'abc',admin:true}
       sessionStorage.setItem('user',JSON.stringify(user))
       return Promise.resolve(user)
