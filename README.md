@@ -1,4 +1,8 @@
-Deployemen Here https://csb-ssqtx-lwed5v0mo.now.sh/
+Available Here https://csb-uqb0c.rk173238.now.sh/
+Here also https://csb-ssqtx-lwed5v0mo.now.sh/
+
+cred:-admin securityManager.123
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
