@@ -29,12 +29,12 @@ class OperationalTracks extends Component{
               <Row style={{height:"100%"}} noGutters>
                 <Col md={4}>
                   <TechOperationalTracks 
-                    data={this.props.data['Technology']} 
+                    // data={this.props.data['Technology']} 
                     onTechClickHandler={this.props.onTechClickHandler} 
                     clickedTrend={this.props.clickedTrend}></TechOperationalTracks>
                 </Col>
                 <Col md={4}>
-                  <PeopleOperationalTracks data={this.props.data['People']}  clickedTrend={this.props.clickedTrend}></PeopleOperationalTracks>
+                  <PeopleOperationalTracks data={''}  clickedTrend={this.props.clickedTrend}></PeopleOperationalTracks>
                 </Col>
                 <Col md={4}>
                   <ProcessOperationalTracks onTechClickHandler={this.props.onTechClickHandler} clickedTrend={this.props.clickedTrend}></ProcessOperationalTracks>

@@ -27,9 +27,9 @@ class TechBar extends Component{
     }
     componentWillReceiveProps=(props)=>{
         this.setState({
-            risk:props.data['Operational Risk']['score'],
-            reliability:props.data['Operational Reliability']['score'],
-            efficiency:props.data['Operational Efficiency']['score']
+            risk:80,
+            reliability:60,
+            efficiency:100
         })
     }
 

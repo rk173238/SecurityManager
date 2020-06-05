@@ -29,10 +29,10 @@ export default class Donut extends Component {
                 position:'center',
                 textStyle:{
                     fontWeight:400,
-                    fontSize:30,
+                    fontSize:20,
                     color:"white",
                 },
-                padding:[40,0,0,0]   
+                padding:[0,0,0,0]   
             },
             labelLine: {show:false},
             

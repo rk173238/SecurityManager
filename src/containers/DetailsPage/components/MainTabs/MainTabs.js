@@ -106,14 +106,14 @@ class MainTabs extends Component {
               Technology
             </span>
           </div>
-          <div className={classes.tabItem} onClick={()=>this.props.history.push({pathname:'/home/details/people/scoredetails'})}>
+          {/* <div className={classes.tabItem} onClick={()=>this.props.history.push({pathname:'/home/details/people/scoredetails'})}>
             <span style={{
               borderBottom:(activeUrl==="people"||activeUrl==="People")?"2px solid #0881dd":"",
               color: (activeUrl==="people"||activeUrl==="People")?"#0881dd":"#fff"
             }}>
               People
             </span>
-          </div>
+          </div> */}
           <div className={classes.tabItem} onClick={()=>this.props.history.push({pathname:'/home/details/process/scoredetails'})}>
             <span style={{
               borderBottom:(activeUrl==="process"||activeUrl==="Process")?"2px solid #0881dd":"",
@@ -130,49 +130,20 @@ class MainTabs extends Component {
             <Route path='/home/details/technology/scoredetails' exact render={()=>
               <ScoreDetailsTabs arrowClicked={this.arrowClicked} data={this.props.techScoreData} type={'Technology'} />}/>
             <Route path='/home/details/technology/techdetails' render={()=>
-              <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory} />}/>
+              <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory} techScoreData={this.props.techScoreData}/>}/>
 
-            <Route path='/home/details/people/scoredetails' exact render={()=>
+            {/* <Route path='/home/details/people/scoredetails' exact render={()=>
                 <ScoreDetailsTabs arrowClicked={this.arrowClicked} data={this.props.peopleScoreData} type={'People'} />}/>
             <Route path='/home/details/people/techdetails'  render={()=>
-              <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory} />}/>
+              <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory} />}/> */}
             
             <Route path='/home/details/process/scoredetails' exact render={()=>
               <ScoreDetailsTabs arrowClicked={this.arrowClicked} data={this.props.processScoreData} type={'Process'} />}/>
             <Route path='/home/details/process/techdetails' render={()=>
-              <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory} />}/>
+              <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory} processScoreData={this.props.processScoreData}/>}/>
           </Switch>
           </div>
-          {/* <Tabs className={classes.baseTabs} initialSelectedIndex={this.selectTab()} tabItemContainerStyle={{backgroundColor:'transparent',width:'600px'}} /*onChange={()=>this.setState({choosenSubCategory:''})}> */}
           
-            {/* <Tab fullWidth={false} label="Technology" className={classes.headTab} data-route={"/home/details/technology/scoredetails"} onActive={this.props.active} style={{backgroundColor:this.selectTab()===0?'rgba(255,255,255,0.1)':'transparent',width:'20%'}}>
-              
-              <Switch>
-                  <Route path='/home/details/technology/scoredetails' exact render={()=>
-                    <ScoreDetailsTabs arrowClicked={this.arrowClicked} data={this.props.techScoreData} type={'technology'}></ScoreDetailsTabs>}/>
-
-                  <Route path='/home/details/technology/techdetails' render={()=>
-                  <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory}></TechnologyDetails>}/>
-              </Switch>
-              
-            </Tab>
-            <Tab label='People' className={classes.headTab} data-route={"/home/details/people/scoredetails"} onActive={this.props.active} style={{backgroundColor:this.selectTab()===1?'rgba(255,255,255,0.1)':'transparent'}}>
-            <Switch>
-                  <Route path='/home/details/people/scoredetails' exact render={()=>
-                    <ScoreDetailsTabs arrowClicked={this.arrowClicked} data={this.props.techScoreData} type={'people'}></ScoreDetailsTabs>}/>
-                  <Route path='/home/details/people/techdetails'  render={()=>
-                    <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory}></TechnologyDetails>}/>
-              </Switch>
-            </Tab>
-            <Tab label='Process' className={classes.headTab} data-route={"/home/details/process/scoredetails"} onActive={this.props.active} style={{backgroundColor:this.selectTab()===2?'rgba(255,255,255,0.1)':'transparent'}}>
-            <Switch>
-                  <Route path='/home/details/process/scoredetails' exact render={()=>
-                    <ScoreDetailsTabs arrowClicked={this.arrowClicked} data={this.props.techScoreData} type={'process'}></ScoreDetailsTabs>}/>
-                  <Route path='/home/details/process/techdetails' render={()=>
-                    <TechnologyDetails choosenSubCategory={this.state.choosenSubCategory}></TechnologyDetails>}/>
-              </Switch>
-            </Tab>
-         */}
           {/* </Tabs> */}
 
             

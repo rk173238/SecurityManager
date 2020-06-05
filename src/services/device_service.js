@@ -46,9 +46,13 @@ function classifyIMPFilter(technology){
   else return ',time,system_name,ip_address,'
 }
 function fetchDevices(technology,usecase,type,dateRange,systemName){
+  if(type==='all') return Promise.resolve(deviceData)
+  if(systemName) return Promise.resolve(deviceData.filter(d=>d.system_name===systemName))
+  var devData=deviceData.filter(device=>classifyUseCase(device.compliance_score)===type)
+  return Promise.resolve(devData)
   return fetchTechDevices(technology,usecase,dateRange,systemName).then(res=>{
     console.log(res.data)
-      if(type==='all') return res.data;
+      if(type==='all') return Promise.resolve;
       var devicesData=res.data.filter(device=>classifyUseCase(device[usecase].compliance_score)===type)
       return devicesData
   })
@@ -70,3 +74,420 @@ function fetchTechDevices(technology,usecase,dateRange,systemName){
   const token=userService.getToken();
   return Api.get(url,{headers: {Authorization : `JWT ${token}`}})
 }
+let deviceData=[
+  {
+    "time": "2020-04-15T00:01:02Z",
+    "tags": null,
+    "location": null,
+    'compliance_score':100,
+    "system_name": "IND_WIP_01",
+    "ap_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "tamper_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "firewall_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "infected": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "agent_version": {
+      "data": "0",
+      "compliance_score": 0
+    },
+    "last_scan_time": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "worstinfection_idx": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "profile_version": {
+      "data": "0",
+      "compliance_score": 0
+    },
+    "ids_version": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "hi_status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "last_update_time": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "cids_drv_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "edr_status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "deploy_status": {
+      "data": "Unknown status",
+      "compliance_score": 0
+    },
+    "da_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "ptp_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "reboot_required": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "avengine_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    }
+  },
+  {
+    "time": "2020-04-15T00:01:02Z",
+    "tags": null,
+    "location": null,
+    "system_name": "IND_WIP_02",
+    'compliance_score':100,
+    "ap_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "tamper_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "firewall_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "infected": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "agent_version": {
+      "data": "0",
+      "compliance_score": 0
+    },
+    "last_scan_time": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "worstinfection_idx": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "profile_version": {
+      "data": "0",
+      "compliance_score": 0
+    },
+    "ids_version": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "hi_status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "last_update_time": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "cids_drv_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "edr_status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "deploy_status": {
+      "data": "Unknown status",
+      "compliance_score": 0
+    },
+    "da_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "ptp_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "reboot_required": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "avengine_enabled": {
+      "data": 0,
+      "compliance_score": 0
+    }
+  },
+  {
+    "time": "2020-04-15T00:01:02Z",
+    "tags": null,
+    "location": null,
+    'compliance_score':0,
+    "system_name": "IND_WIP_03",
+    "ap_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "tamper_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "firewall_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "infected": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "agent_version": {
+      "data": "14.0.3876.1100",
+      "compliance_score": 0
+    },
+    "last_scan_time": {
+      "data": "2019-01-10 09:12:03",
+      "compliance_score": 0
+    },
+    "worstinfection_idx": {
+      "data": 9999,
+      "compliance_score": 100
+    },
+    "profile_version": {
+      "data": "14.0.3876",
+      "compliance_score": 0
+    },
+    "ids_version": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "hi_status": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "last_update_time": {
+      "data": "2019-01-10",
+      "compliance_score": 0
+    },
+    "status": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "cids_drv_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "edr_status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "deploy_status": {
+      "data": "Install successful.",
+      "compliance_score": 100
+    },
+    "da_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "ptp_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "reboot_required": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "avengine_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    }
+  },
+  {
+    "time": "2020-04-15T00:01:02Z",
+    "tags": null,
+    "location": null,
+    'compliance_score':50,
+    "system_name": "IND_WIP_04",
+    "ap_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "tamper_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "firewall_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "infected": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "agent_version": {
+      "data": "14.0.3876.1100",
+      "compliance_score": 0
+    },
+    "last_scan_time": {
+      "data": "2019-01-09 19:05:00",
+      "compliance_score": 0
+    },
+    "worstinfection_idx": {
+      "data": 9999,
+      "compliance_score": 100
+    },
+    "profile_version": {
+      "data": "14.0.3876",
+      "compliance_score": 0
+    },
+    "ids_version": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "hi_status": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "last_update_time": {
+      "data": "2019-01-10",
+      "compliance_score": 0
+    },
+    "status": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "cids_drv_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "edr_status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "deploy_status": {
+      "data": "Install successful.",
+      "compliance_score": 100
+    },
+    "da_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "ptp_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "reboot_required": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "avengine_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    }
+  },
+  {
+    "time": "2020-04-15T00:01:02Z",
+    "tags": null,
+    "location": null,
+    'compliance_score':50,
+    "system_name": "IND_WIP_05",
+    "ap_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "tamper_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "firewall_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "infected": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "agent_version": {
+      "data": "14.0.3876.1100",
+      "compliance_score": 0
+    },
+    "last_scan_time": {
+      "data": "2019-01-09 19:06:02",
+      "compliance_score": 0
+    },
+    "worstinfection_idx": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "profile_version": {
+      "data": "14.0.3876",
+      "compliance_score": 0
+    },
+    "ids_version": {
+      "data": "",
+      "compliance_score": 0
+    },
+    "hi_status": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "last_update_time": {
+      "data": "2019-01-10",
+      "compliance_score": 0
+    },
+    "status": {
+      "data": 1,
+      "compliance_score": 100
+    },
+    "cids_drv_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "edr_status": {
+      "data": 0,
+      "compliance_score": 0
+    },
+    "deploy_status": {
+      "data": "Install successful.",
+      "compliance_score": 100
+    },
+    "da_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "ptp_enabled": {
+      "data": 3,
+      "compliance_score": 0
+    },
+    "reboot_required": {
+      "data": 0,
+      "compliance_score": 100
+    },
+    "avengine_enabled": {
+      "data": 1,
+      "compliance_score": 100
+    }
+  }
+]

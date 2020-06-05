@@ -32,22 +32,25 @@ class ServerLocation extends Component {
             "ap-northeast-3": 78,
             "eu-west-2": 45,
         }
-        var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
-        deviceService.fetchDevices("EC2-AWS", "location", "all", dateRange, "").then(res => {
-            // console.log("RES::", res)
-            res.map(instance => {
-                if (!instances.hasOwnProperty(instance.location.data)) {
-                    instances[instance.location.data] = 1;
-                } else {
-                    instances[instance.location.data]++;
-                }
-            })
-            this.setState({
-                servers: {...instances, ...defaultInstances}
-            })
-        })
+        // var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
+        // deviceService.fetchDevices("EC2-AWS", "location", "all", dateRange, "").then(res => {
+        //     // console.log("RES::", res)
+        //     res.map(instance => {
+        //         if (!instances.hasOwnProperty(instance.location.data)) {
+        //             instances[instance.location.data] = 1;
+        //         } else {
+        //             instances[instance.location.data]++;
+        //         }
+        //     })
+        //     this.setState({
+        //         servers: {...instances, ...defaultInstances}
+        //     })
+        // })
         // console.log("Instances:::", instances)
-        return instances
+        this.setState({
+            servers: defaultInstances
+        })
+        // return instances
     }
 
     render(){

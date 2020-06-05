@@ -23,10 +23,10 @@ class UseCaseBar extends Component{
     // }
     drawChart(){
         // let compliance =this.props.compliance
-        console.log(this.props)
-        var low=this.props.usecaseData.count.low
-        var medium=this.props.usecaseData.count.medium
-        var critical=this.props.usecaseData.count.critical
+        // console.log(this.props)
+        var low=2
+        var medium=2
+        var critical=1
         var usecase=this.props.name
         var scale = d3.scaleLinear().domain([0,(low+medium+critical)]).range([0,140])
         // console.log(compliance)
@@ -64,9 +64,9 @@ class UseCaseBar extends Component{
                 })	
             .on('click',()=>{
                 if(this.props.type!=='Process'){
-                var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
-                this.props.onFetchDevices(this.props.technology,this.props.name,'low',dateRange,'')
-                this.props.showDeviceList(this.props.technology,this.props.name,((low*100)/(low+medium+critical)).toFixed(2))}
+                // var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
+                this.props.onFetchDevices(this.props.technology,this.props.name,'low','dateRange','')
+                this.props.showDeviceList(this.props.technology,this.props.name,((low*100)/(low+medium+critical)).toFixed(2),this.props.techScore)}
             })
         let yellowBar=svg.append('rect')
             .attr('x',60)
@@ -97,9 +97,9 @@ class UseCaseBar extends Component{
                 })	
             .on('click',()=>{
                 if(this.props.type!=='Process'){
-                var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
-                this.props.onFetchDevices(this.props.technology,this.props.name,'medium',dateRange,'')
-                this.props.showDeviceList(this.props.technology,this.props.name,((medium*100)/(low+medium+critical)).toFixed(2))}
+                // var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
+                this.props.onFetchDevices(this.props.technology,this.props.name,'medium','dateRange','')
+                this.props.showDeviceList(this.props.technology,this.props.name,((medium*100)/(low+medium+critical)).toFixed(2),this.props.techScore)}
             })				
         let redBar=svg.append('rect')
             .attr('x',60)
@@ -129,9 +129,9 @@ class UseCaseBar extends Component{
                 })
             .on('click',()=>{
                 if(this.props.type!=='Process'){
-                    var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
-                    this.props.onFetchDevices(this.props.technology,this.props.name,'critical',dateRange,'')
-                    this.props.showDeviceList(this.props.technology,this.props.name,((critical*100)/(low+medium+critical)).toFixed(2))}
+                    // var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
+                    this.props.onFetchDevices(this.props.technology,this.props.name,'critical','dateRange','')
+                    this.props.showDeviceList(this.props.technology,this.props.name,((critical*100)/(low+medium+critical)).toFixed(2),this.props.techScore)}
                 })
         
         //TOOLTIP AND TEXT

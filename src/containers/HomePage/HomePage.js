@@ -42,21 +42,21 @@ class HomePage extends Component{
   closeCategoryTrendsDialog=()=>{
     this.setState({openCategoryTrendsDialog:false})
   }
-  
+  loading=()=>{
+    
+  }
   render(){
-    if((this.props.login&&!this.props.fetchedData)||this.props.fetchingData){
-      return(
-        <Loading/>
-      );
-    }
+    // if((this.props.login&&!this.props.fetchedData)||this.props.fetchingData){
+    //   return(
+    //     <Loading/>
+    //   );
+    // }
     return(
       <div className={classes.flexContainer} style={{backgroundColor:'transparent'}}>
-      
+        
         <HomePageScores></HomePageScores>
-
-        {console.log(this.state)}
         <OperationalTracks 
-                    data={this.props.newData}
+                    data='{this.props.newData}'
                     onTechClickHandler={this.onTechClickHandler}
                     clickedTrend={this.clickedTrend}></OperationalTracks>
         <CategoryTrendsDialog 

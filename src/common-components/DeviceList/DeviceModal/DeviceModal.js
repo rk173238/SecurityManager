@@ -60,9 +60,9 @@ class DeviceModal extends Component{
                             <div>
                                 {generateFullList([this.props.data[0]])}
                             </div>
-                            <div>
+                            {/* <div>
                                 {generateFullList([this.props.data[1]])}
-                            </div>
+                            </div> */}
                         </div>}
                         <button onClick={this.showFullList}>{this.state.showFullList?'Less Details':'More Details'}</button>
                       </div>

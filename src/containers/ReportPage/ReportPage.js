@@ -92,7 +92,7 @@ class ReportPage extends Component{
 
             </div>
             <Switch>
-              <Route exact path='/home/report/' render={()=><Redirect to='/home/report/clouddashboard/'></Redirect>}></Route>
+              <Route exact path='/home/report/' render={()=><Redirect to='/home/report/covid19protection/'></Redirect>}></Route>
               <Route path='/home/report/kpidashboard/' render={()=> <KPIDashboard /> }/>
               <Route path='/home/report/clouddashboard/' render={()=> <CloudDashboard /> }/> 
               <Route path='/home/report/analystdashboard/' render={()=> <DataSecurity /> }/>

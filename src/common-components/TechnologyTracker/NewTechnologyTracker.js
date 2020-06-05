@@ -15,16 +15,16 @@ class TechnologyTracker extends Component{
         let type=this.props.choosenSubCategory.split('_')[0]
         let category=this.props.choosenSubCategory.split('_')[1]
         let subcategory=this.props.choosenSubCategory.split('_')[2]
-        console.log(this.props)
+        // console.log(this.props)
         if(type==='Process') return {categoryScore:40,subcategoryScore:50}
         let categoryScore=0
         let subcategoryScore=0
         if(this.props.categoriesData){
-            categoryScore=this.props.categoriesData[type][category].score
-            subcategoryScore=this.props.categoriesData[type][category]['sub_categories'][subcategory]
+            categoryScore=this.props.categoriesData[category].score
+            subcategoryScore=this.props.categoriesData[category]['sub_categories'][subcategory]
         }
         // this.setState({categoryScore:categoryScore,subcategoryScore:subcategoryScore})
-        // console.log(this.props)
+        console.log(this.props)
         return {categoryScore,subcategoryScore}
     }
 
@@ -88,7 +88,7 @@ const currentQuarter=(props)=>{
 const mapStateToProps=state=>{
     // console.logs(state)
     return{
-        categoriesData:state.fetchData.data
+        // categoriesData:state.fetchData.data
     }
 }
 export default connect(mapStateToProps)(TechnologyTracker)

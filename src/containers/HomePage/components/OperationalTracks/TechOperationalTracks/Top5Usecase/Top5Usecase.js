@@ -15,7 +15,10 @@ class Top5Usecase extends Component{
     }
     componentWillMount=()=>{
         // this.fetchWeightage();
-        this.fetchUsecaseCompliance();
+        // this.fetchUsecaseCompliance();
+        setTimeout(() => {
+            this.setState({data:'ab'})
+        }, 2000);
     }
     fetchWeightage=()=>{
         weightageService.getWeightage('tech').then(res=>{
@@ -116,22 +119,32 @@ class Top5Usecase extends Component{
                         <p className={bottomTitle}>Critical Parameters</p>
                         <InfoIcon style={infoIconStyle} />
                     </div>
-                    {this.state.data.map((data,i)=>(
-                        <div 
-                            key={i} 
-                            style={{
-                                display:'flex', 
-                                padding:"0 5px",
-                                fontSize:'1em',
-                                color:"#ffffffa6"
-                            }}
-                        >
-                            <div style={{flex:"1"}}><img src={this.imgPath(data.technology)} className={classes.vendorLogo}/></div>
-                            <div style={{flex:"6"}}>{dataConstants.usecaseNameMap[data.data[0].name]}</div>
-                            <div style={{flex:1,textAlign:'right'}}>{data.data[0].score}%</div>
-                            {/* <div>{data.data[0].count.low}</div> */}
-                        </div>
-                    ))}   
+                    
+                    <div style={{display:'flex', padding:"0 5px",fontSize:'1em',color:"#ffffffa6"}}>
+                        <div style={{flex:"1"}}><img src={this.imgPath('av-mcafee')} className={classes.vendorLogo}/></div>
+                        <div style={{flex:"6"}}>{'Reboot Required'}</div>
+                        <div style={{flex:1,textAlign:'right'}}>{90}%</div>
+                    </div>
+                    <div style={{display:'flex', padding:"0 5px",fontSize:'1em',color:"#ffffffa6"}}>
+                        <div style={{flex:"1"}}><img src={this.imgPath('hips-mcafee')} className={classes.vendorLogo}/></div>
+                        <div style={{flex:"6"}}>{'DAT Version'}</div>
+                        <div style={{flex:1,textAlign:'right'}}>{50}%</div>
+                    </div>
+                    <div style={{display:'flex', padding:"0 5px",fontSize:'1em',color:"#ffffffa6"}}>
+                        <div style={{flex:"1"}}><img src={this.imgPath('s3-aws')} className={classes.vendorLogo}/></div>
+                        <div style={{flex:"6"}}>{'AWS Location'}</div>
+                        <div style={{flex:1,textAlign:'right'}}>{90}%</div>
+                    </div>
+                    <div style={{display:'flex', padding:"0 5px",fontSize:'1em',color:"#ffffffa6"}}>
+                        <div style={{flex:"1"}}><img src={this.imgPath('ec2-aws')} className={classes.vendorLogo}/></div>
+                        <div style={{flex:"6"}}>Monitoring</div>
+                        <div style={{flex:1,textAlign:'right'}}>{45}%</div>
+                    </div>
+                    <div style={{display:'flex', padding:"0 5px",fontSize:'1em',color:"#ffffffa6"}}>
+                        <div style={{flex:"1"}}><img src={this.imgPath('loadbalancer-f5')} className={classes.vendorLogo}/></div>
+                        <div style={{flex:"6"}}>{'NAT Enabled'}</div>
+                        <div style={{flex:1,textAlign:'right'}}>{60}%</div>
+                    </div>    
                 </div>
                 :
                 <div style={loaderStyles}>

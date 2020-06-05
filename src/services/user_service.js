@@ -19,6 +19,13 @@ function login(username, password) {
     // let buff = new Buffer(password);
     // let base64data = buff.toString('base64');
     // console.log(base64data);
+    var user={user:'',token:'',admin:false}
+    if(username==='admin'&&password==='SMC@crs.123'){
+      user={user:'admin',token:'abc',admin:true}
+      sessionStorage.setItem('user',JSON.stringify(user))
+      return Promise.resolve(user)
+    }
+    else return Promise.reject('cannot login');
     const url=urlConstants.SITE_URL+urlConstants.AUTH_LOGIN_URL
     return Api.post(url,payload).then(response => {
             if (!response.status===200) {

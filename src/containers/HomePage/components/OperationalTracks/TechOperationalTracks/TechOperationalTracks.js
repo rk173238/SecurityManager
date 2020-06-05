@@ -13,7 +13,7 @@ class  TechOperationalTracks extends Component{
     
     return(
       <div className={parentClass.cardsWrapper}>
-        <TechBar data={this.props.data} id='tech' onTechClickHandler={this.props.onTechClickHandler} clickedTrend={this.props.clickedTrend}></TechBar>
+        <TechBar id='tech' onTechClickHandler={this.props.onTechClickHandler} clickedTrend={this.props.clickedTrend}></TechBar>
         <div className={parentClass.dataCards} onClick={()=>{this.props.history.push({pathname:'/home/details/technology/scoredetails'})}}>
           <Top5Usecase></Top5Usecase>
         </div>

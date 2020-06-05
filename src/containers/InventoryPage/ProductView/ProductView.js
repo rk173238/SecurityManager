@@ -64,6 +64,7 @@ class ProductView extends Component{
         // const imgPath = require('../../../../assets/aws-ec2.jpg');
         return(
             <div>
+                {console.log(this.props)}
                 <div className={classes.root} >
                     <div style={{display:'flex', marginLeft:'19%'}}>
                         <p 
@@ -79,6 +80,7 @@ class ProductView extends Component{
                         <p style={{fontSize:20,color:'rgb(126, 216, 243)',width:'15%',marginLeft:'7%'}}>Compliance</p>
                         <p style={{fontSize:20,color:'rgb(126, 216, 243)',width:'45%',marginLeft:'7%'}}>Vendors</p>
                     </div>
+                    
                     {/*div with overflow*/}
                     <div className={classes.technologiesContainer} >
                     {this.state.data.map((data,i)=>(

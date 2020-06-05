@@ -31,7 +31,7 @@ class LineChart extends Component {
             nameLocation: 'middle',
             type: 'category',
             boundaryGap: false,
-            data: ['W1','W2','W3','W4','W5']
+            data: ['W1','W2','W3','W4']
         },
         yAxis: {
             type: 'value',
@@ -43,7 +43,7 @@ class LineChart extends Component {
         },
         series: [{
             name:'Tech',
-            data: [],
+            data: [50,60,75,75],
             type: 'line',
             color:'#32f732',
             lineStyle: {
@@ -56,7 +56,7 @@ class LineChart extends Component {
         },
         {
             name:'People',
-            data: [],
+            data: [80,85,90,95],
             type: 'line',
             color:"yellow",
             lineStyle: {
@@ -68,7 +68,7 @@ class LineChart extends Component {
         },
         {
             name:'Process',
-            data: [],
+            data: [50,55,45,60],
             type: 'line',
             color:"blue",
             lineStyle: {
@@ -83,9 +83,9 @@ class LineChart extends Component {
     }
     getOption=()=>{
         let option=this.getOpts();
-        option.series[0].data=this.props.tech;
-        option.series[1].data=this.props.people;
-        option.series[2].data=this.props.process;
+        // option.series[0].data=this.props.tech;
+        // option.series[1].data=this.props.people;
+        // option.series[2].data=this.props.process;
         // console.log(option,this.props)
         return option;
     }

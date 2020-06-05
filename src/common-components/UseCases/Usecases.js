@@ -19,14 +19,14 @@ class UseCases extends Component{
     $('#div'+this.props.technology).animate({"scrollLeft": "+=200%"},750);
   }
   componentWillMount=()=>{
-    // this._isMounted = true;
+    this._isMounted = true;
     // console.log(this.props,"Usecase.js")
     // if(this.props.type!=='Process'){
-    var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
-    dataService.fetchTechnologyData(this.props.technology,Object.keys(this.props.usecaseData),dateRange,true).then(res=>{
-      console.log(res)
-      this.setState({usecaseData:res})
-    },e=>console.log(e))
+    // var dateRange=[JSON.parse(localStorage.getItem('date'))[1],JSON.parse(localStorage.getItem('date'))[2]]
+    // dataService.fetchTechnologyData(this.props.technology,Object.keys(this.props.usecaseData),dateRange,true).then(res=>{
+    //   console.log(res)
+    //   this.setState({usecaseData:res})
+    // },e=>console.log(e))
     // }
     // else{
     //   this.setState({usecaseData:processDummyUsecaseBar[this.props.technology]})
@@ -41,13 +41,14 @@ class UseCases extends Component{
         ref={ (usecaseWrapper) => { this.usecaseWrapper = usecaseWrapper } }
       >   
         <div style={{display:"flex"}}>
-          {this.state.usecaseData?
-          this.state.usecaseData.data.map((usecase,i)=>(
-            <UseCaseBar key={usecase.name} id={this.props.technology.split(' ')[0]+usecase.name} showDeviceList={this.props.showDeviceList}
-                usecaseData={this.state.usecaseData.data[i]} technology={this.props.technology} name={usecase.name}
-                score={this.props.usecaseData[usecase.name]} type={this.props.type} width={this.usecaseWrapper.clientWidth}></UseCaseBar>
+          {/* {console.log(this.props)} */}
+          {
+          Object.keys(this.props.usecaseData).map((usecase,i)=>(
+            <UseCaseBar key={usecase} id={this.props.technology.split(' ')[0]+usecase} showDeviceList={this.props.showDeviceList}
+                technology={this.props.technology} name={usecase}
+                score={this.props.usecaseData[usecase]} type={this.props.type} techScore={this.props.techScore}></UseCaseBar>
           ))
-          :null}    
+          }
         </div>
         
         {this.state.usecaseData?(this.state.usecaseData.data.length>4?

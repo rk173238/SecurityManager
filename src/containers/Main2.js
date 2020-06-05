@@ -292,14 +292,14 @@ class MainContent extends Component {
   }
 
   render() {
-    setTimeout(() => {
-      var  tried=0;
-      if(tried<=3){
-      if (this.props.login && !this.props.fetchingData && !this.props.fetchedData) 
-        this.props.onFetchDataWithDate([this.getDataByTime()[0], this.getDataByTime()[2]], this.state.locationValue);  
-        tried=tried+1; }else     
-      alert("Tried "+tried+" times:  Data not found")
-    }, 1000);
+    // setTimeout(() => {
+    //   var  tried=0;
+    //   if(tried<=3){
+    //   if (this.props.login && !this.props.fetchingData && !this.props.fetchedData) 
+    //     this.props.onFetchDataWithDate([this.getDataByTime()[0], this.getDataByTime()[2]], this.state.locationValue);  
+    //     tried=tried+1; }else     
+    //   alert("Tried "+tried+" times:  Data not found")
+    // }, 1000);
     return (
       <div 
         className={mediaScreen.mainContentClearance}
@@ -346,13 +346,13 @@ class MainContent extends Component {
                 <Redirect to="/login" />)} />
               <Route path='/home/admin/' render={() => (this.props.login ? (<UserPage></UserPage>) :
                 <Redirect to="/login" />)} />
-              <Route path='/home/inventory/' render={() => (this.props.login ? (this.props.data ? <InventoryPage/> : null) :
+              <Route path='/home/inventory/' render={() => (this.props.login ?<InventoryPage/>:
                 <Redirect to="/login" />)} />
-              <Route path='/home/config/' render={() => (this.props.login ? (this.props.data ? <WeightagePage /> : null) :
+              <Route path='/home/config/' render={() => (this.props.login ?<WeightagePage />:
                 <Redirect to="/login" />)} />
-              <Route path='/home/changepassword/' render={() => (this.props.login ? (this.props.data ? <ChangePassword /> : null) :
+              <Route path='/home/changepassword/' render={() => (this.props.login ?<ChangePassword />:
                 <Redirect to="/login" />)} />
-              <Route path='/home/help/' render={() => (this.props.login ? (this.props.data ? <HelpPage /> : null) :
+              <Route path='/home/help/' render={() => (this.props.login ? <HelpPage /> :
                 <Redirect to="/login" />)} />
               <Route path='/home/test/' render={() => (this.props.login ? (this.props.data ? <Test /> : null) :
                 <Redirect to="/login" />)} />

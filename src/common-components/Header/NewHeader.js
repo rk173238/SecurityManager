@@ -29,8 +29,8 @@ class Header extends Component {
             this.setState({dashboardClicked:true,inventoryClicked:false,analysisClicked:false,reportClicked:false,userClicked:false})
         else if(name==='inventory')
             this.setState({dashboardClicked:false,inventoryClicked:true,analysisClicked:false,reportClicked:false,userClicked:false})
-        else if(name==='analysis')
-            this.setState({dashboardClicked:false,inventoryClicked:false,analysisClicked:true,reportClicked:false,userClicked:false})
+        // else if(name==='analysis')
+        //     this.setState({dashboardClicked:false,inventoryClicked:false,analysisClicked:true,reportClicked:false,userClicked:false})
         else if(name==='report')
             this.setState({dashboardClicked:false,inventoryClicked:false,analysisClicked:false,reportClicked:true,userClicked:false})
         else if(name==='user')
@@ -89,14 +89,14 @@ class Header extends Component {
                         <div className={classes.headerLink + " " + (this.state.reportClicked?classes.linkActive:"")}>
                             <Link to='/home/report'>INSIGHT</Link>
                         </div>
-                        <div 
+                        {/* <div 
                             className={classes.headerLink + " " + (this.state.analysisClicked?classes.linkActive:"")}
                             style={{
                                 marginRight:0
                             }}
                         >
                             <Link to='/home/analysis/smcmap'>ANALYSIS</Link>
-                        </div>
+                        </div> */}
                         <div 
                             className={classes.headerLink + " " + (this.state.userClicked?classes.linkActive:"")} 
                             style={{position:"relative"}}

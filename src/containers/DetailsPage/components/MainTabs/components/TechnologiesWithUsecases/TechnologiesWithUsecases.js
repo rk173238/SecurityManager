@@ -15,7 +15,7 @@ class TechnologiesWithUseCases extends Component{
   }
   componentWillMount=()=>{
     this.setState({subCategory:this.props.choosenSubCategory.split('_')[2]})
-    this.fetchdata(this.props.choosenSubCategory.split('_')[2],localStorage.getItem('date'))
+    // this.fetchdata(this.props.choosenSubCategory.split('_')[2],localStorage.getItem('date'))
   }
   componentWillUnmount=()=>{
     this.props.onClearSubcategory()
@@ -24,7 +24,7 @@ class TechnologiesWithUseCases extends Component{
     // console.log(this.props)
     // if(this.props.choosenSubCategory.split('_')[0]!=='Process'){
     console.log('fetchData in techwithusecase')
-    this.props.onfetchSubcategoryData(props,'',[JSON.parse(date)[1],JSON.parse(date)[2]])
+    // this.props.onfetchSubcategoryData(props,'',[JSON.parse(date)[1],JSON.parse(date)[2]])
   // }else{
   //     this.setState({ShowProcess:true})
   //   }
@@ -33,19 +33,19 @@ class TechnologiesWithUseCases extends Component{
     render(){
         return(
             <div>
-              {console.log(this.props)}
-              {this.props.subcatData?Object.keys(this.props.subcatData).map(technology=>(
-                
+              {console.log(Object.keys(this.props.subCatData))}
+              {Object.keys(this.props.subCatData).map(technology=>(
                 <div key={technology} style={{marginTop:"15px"}}>
+                {/* {console.log(technology)} */}
                 <div style={{width:'100%',display:'flex',position:'relative',direction:'ltr',backgroundColor:'transparent'}}>
-                <TechnologyMeter id={technology} score={this.props.subcatData[technology].score} showTechOnTracker={this.props.showTechOnTracker}></TechnologyMeter>
-                <UseCases usecaseData={this.props.subcatData[technology].usecases} 
-                  technology={technology} showDeviceList={this.props.showDeviceList} type={this.props.choosenSubCategory.split('_')[0]}></UseCases>
+                <TechnologyMeter id={technology} score={this.props.subCatData[technology].score} showTechOnTracker={this.props.showTechOnTracker}></TechnologyMeter>
+                <UseCases usecaseData={this.props.subCatData[technology].usecases} 
+                  technology={technology} showDeviceList={this.props.showDeviceList} techScore={this.props.subCatData[technology].score} type={this.props.choosenSubCategory.split('_')[0]}></UseCases>
                 </div>
                 <hr className={hr.hr1} />
                 </div>
               ))
-              :null
+              
               }
               
               {/* {this.props.processSubcatData&&this.state.ShowProcess?Object.keys(this.props.processSubcatData).map(technology=>(

@@ -47,7 +47,7 @@ const PeopleOperationalTracks=(props)=>(
           data={{
             name:"Awareness", 
             color:"#fbff00",
-            value:props.data['Training and Awareness'].score
+            value:80
           }} 
         />
         <Donut 
@@ -57,7 +57,7 @@ const PeopleOperationalTracks=(props)=>(
           data={{
             name:"InfoSec", 
             color:"red",
-            value:props.data['Information Security'].score
+            value:60
           }} 
         />
         <Donut 
@@ -67,7 +67,7 @@ const PeopleOperationalTracks=(props)=>(
           data={{
             name:"Compliance", 
             color:"#fbff00",
-            value:props.data['Compliance'].score
+            value:60
           }} 
         />
       </div>

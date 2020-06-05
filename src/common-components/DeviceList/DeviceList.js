@@ -39,8 +39,8 @@ class DeviceList extends Component{
         return str;
     }
     openDeviceDetail=(data)=>{
-        var dateRange=[JSON.parse(localStorage.getItem('date'))[0],JSON.parse(localStorage.getItem('date'))[2]]
-        deviceService.fetchDevices(this.props.techName,'','all',dateRange,data[this.classifySystemName()]).then(res=>{
+        // var dateRange=[JSON.parse(localStorage.getItem('date'))[0],JSON.parse(localStorage.getItem('date'))[2]]
+        deviceService.fetchDevices(this.props.techName,'','all','dateRange',data[this.classifySystemName()]).then(res=>{
             console.log(res);
             this.setState({deviceData:res,openDeviceDetail:true})
         },e=>alert('error while fetching device data'))
@@ -49,16 +49,17 @@ class DeviceList extends Component{
         this.setState({openDeviceDetail:false,deviceData:''})
     }
     classifySystemName=()=>{
-        if(this.props.techName==="EC2-AWS") return 'instance_name'
-        else if(this.props.techName==='S3-AWS') return 'bucket_name'
-        else if(this.props.techName==='Ticketing-ServiceNow') return 'engineer_name'
-        else if(this.props.techName==='DLPDiscover-Symantec') return 'incident_id'
-        else if(this.props.techName==='DLPEndpoint-Symantec') return 'incident_id'
-        else if(this.props.techName==='People-People') return 'username'
-        else if(this.props.techName==='DLP-Symantec') return 'ip_address'
-        else if(this.props.techName==='AV-McAfee') return 'nodename'
-        else if(this.props.techName==='CMDB-ServiceNow') return 'name'
-        else return 'system_name'
+        // if(this.props.techName==="EC2-AWS") return 'instance_name'
+        // else if(this.props.techName==='S3-AWS') return 'bucket_name'
+        // else if(this.props.techName==='Ticketing-ServiceNow') return 'engineer_name'
+        // else if(this.props.techName==='DLPDiscover-Symantec') return 'incident_id'
+        // else if(this.props.techName==='DLPEndpoint-Symantec') return 'incident_id'
+        // else if(this.props.techName==='People-People') return 'username'
+        // else if(this.props.techName==='DLP-Symantec') return 'ip_address'
+        // else if(this.props.techName==='AV-McAfee') return 'nodename'
+        // else if(this.props.techName==='CMDB-ServiceNow') return 'name'
+        // else 
+        return 'system_name'
     }
     //this.capitalizeFirstLetter(this.props.usecase) | this.props.usecaseScore
     openUsecaseTrendsDialog=()=>{
@@ -175,7 +176,7 @@ class DeviceList extends Component{
                                             fontSize: this.state.isDesktop ? "1.18vw" : "14px"
                                         }}
                                     >
-                                        {data[this.props.usecase]['compliance_score']}
+                                        {data['compliance_score']}
                                     </TableCell>
                                     {/* <TableCell style={{color:'white',fontSize:14}}>{data['Risk Contribution']}</TableCell> */}
                                     <TableCell>
