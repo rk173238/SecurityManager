@@ -10,7 +10,7 @@ import InputFields from '../InputFields/InputFields';
 const LoginCard=(props)=>(
   <div className={cssClasses.loginCard} >
 
-    <img src={require("../../../../assets/logo.png")} alt='logo' className={cssClasses.userLoginImage}/>
+    <img src={require("../../../../assets/sideImage.png")} alt='logo' className={cssClasses.userLoginImage}/>
   <form name="form" onSubmit={props.handleSubmit} autoComplete='off'>
 
       <InputFields handleChange={props.handleChange} alertMessage={props.alertMessage} username={props.username} password={props.password} submitted={props.submitted}/>

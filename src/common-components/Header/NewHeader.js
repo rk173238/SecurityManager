@@ -74,8 +74,8 @@ class Header extends Component {
                             src={require('../../assets/logo_small.png')} 
                             style={{width:"50px", marginRight:"10px"}}
                         />
-                        <span className={classes.desktopName}>SMC 3.0</span>
-                        <span className={classes.mobileName}>SMC 3.0</span>
+                        <span className={classes.desktopName}>Security Manager</span>
+                        <span className={classes.mobileName}>Security Manager</span>
                     </h3>
                 </div>
                 <div className={classes.menuGroup}>

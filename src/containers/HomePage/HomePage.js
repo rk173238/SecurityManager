@@ -13,6 +13,7 @@ class HomePage extends Component{
       newData:[],
       openCategoryTrendsDialog:false,
       clickedTrend:'',
+      loading:true,
     }
   }
   // static getDerivedStateFromProps(nextProps,prevState){
@@ -42,16 +43,19 @@ class HomePage extends Component{
   closeCategoryTrendsDialog=()=>{
     this.setState({openCategoryTrendsDialog:false})
   }
-  loading=()=>{
-    
+  componentDidMount=()=>{
+    setTimeout(() => {
+      this.setState({loading:false})
+    }, 2000);
   }
   render(){
-    // if((this.props.login&&!this.props.fetchedData)||this.props.fetchingData){
-    //   return(
-    //     <Loading/>
-    //   );
-    // }
+    if(this.state.loading){
+      return(
+        <Loading/>
+      );
+    }
     return(
+      
       <div className={classes.flexContainer} style={{backgroundColor:'transparent'}}>
         
         <HomePageScores></HomePageScores>
@@ -66,6 +70,7 @@ class HomePage extends Component{
           practice={this.state.practice}></CategoryTrendsDialog>
         {/* <ShortcutButtons admin={this.props.admin}/> */}
       </div>
+      
     );
   }
 }

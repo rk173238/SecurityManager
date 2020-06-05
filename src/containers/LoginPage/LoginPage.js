@@ -5,7 +5,7 @@ import { userActions } from '../../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import LoginCard from './components/LoginCard/LoginCard';
-// import Particles from 'react-particles-js';
+import Particles from 'react-particles-js';
 
 
 class LoginPage extends Component{
@@ -37,8 +37,8 @@ class LoginPage extends Component{
             const { username, password, submitted} = this.state;
             return(
                     <Paper className={cssClasses.flexContainer}>
-                    {/* <Particles params={particlesConfig} className={cssClasses.particlesContainer}  /> */}
-                    {/* <img src={require('../../assets/sideImage.png')} alt='sideImage' className={cssClasses.sideImage}/> */}
+                    <Particles params={particlesConfig} className={cssClasses.particlesContainer}  />
+                    <img src={require('../../assets/sideImage.png')} alt='sideImage' className={cssClasses.sideImage}/>
                     <LoginCard handleLocationChange={this.props.handleLocationChange} locationValue={this.props.locationValue} loggingIn={loggingIn} alertMessage={this.props.alert.message} username={username} password={password} submitted={submitted} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
                     </Paper>
                   );
